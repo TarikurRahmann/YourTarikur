@@ -50,7 +50,7 @@
 ### **Tarikur Rahman**
 *Full-Stack Engineer | AI Automation Developer | Defense Robotics Enthusiast*
 
-[![GitHub Profile](https://img.shields.io/badge/GitHub-TarikurRahman-181717?style=flat-square&logo=github)](https://github.com/TarikurRahman)
+[![GitHub Profile](https://img.shields.io/badge/GitHub-tarikurrahmann-181717?style=flat-square&logo=github)](https://github.com/tarikurrahmann)
 [![Portfolio](https://img.shields.io/badge/Website-YourTarikur-blue?style=flat-square&logo=googlechrome)](https://yourtarikur.vercel.app)
 
 ***"Engineering future-ready intelligent automation and high-impact web architectures."***
@@ -100,7 +100,7 @@ To run and inspect the repository locally on your device:
 ## 🙌 Acknowledgements & Credits
 
 - Special thanks and credit to **[RH Shihab](https://github.com/RHShihab)** for the foundational base template ([my-portfolio](https://github.com/RHShihab/my-portfolio)). 
-- Customizations, advanced feature integrations, and responsive re-architecting maintained by **[Tarikur Rahman](https://github.com/TarikurRahman)**.
+- Customizations, advanced feature integrations, and responsive re-architecting maintained by **[Tarikur Rahman](https://github.com/tarikurrahmann)**.
 
 ---
 

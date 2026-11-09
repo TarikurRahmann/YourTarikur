@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <div
       className="min-h-screen flex flex-col items-center justify-center"
-      style={{ backgroundColor: "var(--bg-color)" }}
+      style={{ color: "var(--text-color)" }}
     >
       <p
         className="text-6xl font-bold mb-4"

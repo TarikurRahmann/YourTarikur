@@ -7,21 +7,24 @@ Tarikur Rahman is a robotics inventor, systems thinker, and technology researche
 He currently works with Team DEMON71 and has contributed to projects spanning robotics prototyping, embedded systems, autonomous platforms, and digital innovation.
 
 ## Key Projects
-- PHANTOM-X — Tactical defense rover platform focused on robotics innovation and field-based experimentation.
-- PHOENIX-F1 — Firefighting rover concept built around safety, automation, and engineering problem solving.
-- AETHER-H1 — Global IoT automation project designed for connected systems and intelligent deployment scenarios.
+- AETHER-H1 — Tarikur Rahman's first project: a NodeMCU smart-home prototype with a custom mobile app, fire alerts, temperature/humidity/moisture monitoring, servo-operated doors and windows, and fan/light control. https://yourtarikur.vercel.app/projects/AETHER-H1
+- PHOENIX-F1 — Firefighting rover concept built around safety, automation, and engineering problem solving. https://yourtarikur.vercel.app/projects/PHOENIX-F1
+- PHANTOM-X — Tactical defense rover platform focused on robotics innovation and field-based experimentation. https://yourtarikur.vercel.app/projects/PHANTOM-X
 - SHEPHERD-X — Real-time safety tracking and monitoring solution for advanced robotics and field operations.
 
 ## Awards
+- ATLÂNTIA International STEM Olympiad 2026 Gold Medalist (National)
 - WICE 2026 Gold Medalist
-- 47th National Science Fair Champion
+- 47th National Science & Technology Week 2026 Special 5th Place
 
 ## Professional Links
 - Website: https://yourtarikur.vercel.app/
-- GitHub: https://github.com/tarikurrahmanbd
+- LinkedIn: https://linkedin.com/in/tarikurrahmann
+- X (Twitter): https://x.com/tarikurrahmann
+- GitHub: https://github.com/tarikurrahmann
+- TikTok: https://tiktok.com/@tarikurrahmann
 - ORCID: https://orcid.org/0009-0007-1408-9826
-- Facebook: https://www.facebook.com/tarikurrahman08/
-- Instagram: https://www.instagram.com/tarikurrahman08/
+- Facebook: https://facebook.com/tarikurrahmann
 - Email: tarikurrahman2008@gmail.com
 
 ## Summary

@@ -16,8 +16,10 @@ const sectionLinks = [
 ];
 
 const projectLinks = [
-  { label: "PHOENIX-F1", href: "/projects/PHOENIX-F1", desc: "Advanced robotics intelligence platform" },
-  { label: "PHANTOM-X", href: "/projects/PHANTOM-X", desc: "Autonomous tactical platform" },
+  { label: "All Projects", href: "/projects/", desc: "Explore featured builds" },
+  { label: "AETHER-H1", href: "/projects/AETHER-H1", desc: "NodeMCU smart home with app control" },
+  { label: "PHOENIX-F1", href: "/projects/PHOENIX-F1", desc: "Fire-response rover" },
+  { label: "PHANTOM-X", href: "/projects/PHANTOM-X", desc: "Remote-operated tactical defense rover" },
 ];
 
 const Navbar = () => {

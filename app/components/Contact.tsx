@@ -3,8 +3,13 @@
 import { useContext } from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
-import { FaGithub, FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaLocationDot, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { FaFacebook, FaGithub } from "react-icons/fa";
+import {
+  FaArrowUpRightFromSquare,
+  FaLinkedinIn,
+  FaLocationDot,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { MdEmail as EmailIcon } from "react-icons/md";
 import CustomSection from "./custom/CustomSection";
 import { ThemeContext } from "../context/ThemeContext";
@@ -28,32 +33,32 @@ const Contact = () => {
       displayValue: CONTACT.email,
     },
     {
-      icon: <FaFacebook className={`text-lg ${darkMode ? "text-blue-500" : "text-blue-600"}`} />,
-      label: "Facebook",
-      value: CONTACT.facebook,
-      link: CONTACT.facebook,
-      displayValue: "fb/tarikurrahman08",
-    },
-    {
-      icon: <FaInstagram className={`text-lg ${darkMode ? "text-orange-400" : "text-orange-600"}`} />,
-      label: "Instagram",
-      value: CONTACT.instagram,
-      link: CONTACT.instagram,
-      displayValue: "ig/tarikurrahman08",
-    },
-    {
-      icon: <FaTiktok className={`text-lg ${darkMode ? "text-teal-400" : "text-teal-600"}`} />,
-      label: "TikTok",
-      value: CONTACT.tiktok,
-      link: CONTACT.tiktok,
-      displayValue: "@tarikurrahman.bd",
+      icon: <FaLinkedinIn className={`text-lg ${darkMode ? "text-sky-400" : "text-sky-600"}`} />,
+      label: "LinkedIn",
+      value: CONTACT.linkedin,
+      link: CONTACT.linkedin,
+      displayValue: "in/tarikurrahmann",
     },
     {
       icon: <FaGithub className={`text-lg ${darkMode ? "text-slate-300" : "text-slate-700"}`} />,
       label: "GitHub",
       value: CONTACT.github,
       link: CONTACT.github,
-      displayValue: "github/tarikurrahmanbd",
+      displayValue: "tarikurrahmann",
+    },
+    {
+      icon: <FaFacebook className={`text-lg ${darkMode ? "text-blue-500" : "text-blue-600"}`} />,
+      label: "Facebook",
+      value: CONTACT.facebook,
+      link: CONTACT.facebook,
+      displayValue: "fb/tarikurrahmann",
+    },
+    {
+      icon: <FaXTwitter className={`text-lg ${darkMode ? "text-slate-300" : "text-slate-700"}`} />,
+      label: "X (Twitter)",
+      value: CONTACT.x,
+      link: CONTACT.x,
+      displayValue: "@tarikurrahmann",
     },
   ];
 

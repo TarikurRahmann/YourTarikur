@@ -81,6 +81,13 @@ const AwardCard = ({
     activeBg = "#B87332";
     activeText = "#FFFFFF";
     activeBorder = "#FFB86C";
+  } else if (award.event === "Fibonacci International Robot & STEM Olympiad 2026") {
+    hoverBgColor = "hover:bg-[#21191c] hover:text-white";
+    hoverBorderColor = "hover:border-[#B91C32]";
+    lightGlowColor = "rgba(185, 28, 50, 0.12)";
+    activeBg = "#21191c";
+    activeText = "#FFFFFF";
+    activeBorder = "#B91C32";
   } else {
     // Default fallback for Finalists or general events
     hoverBgColor = "hover:bg-purple-600 hover:text-white";
@@ -197,7 +204,6 @@ const AwardCard = ({
 const Awards = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
   const { darkMode } = useContext(ThemeContext);
-
   const handleCardClick = (id: string) => {
     setExpandedCard(expandedCard === id ? null : id);
   };
@@ -214,7 +220,11 @@ const Awards = () => {
 
       {Object.keys(AWARDS).map((category) => (
         <div key={category} className="mb-12">
-          <h2 className="mt-10 mb-6 text-center font-semibold text-2xl text-purple-400">
+          <h2
+            className={`mt-10 mb-6 text-center font-semibold text-2xl ${
+              darkMode ? "text-purple-400" : "text-purple-700"
+            }`}
+          >
             {category.split(",").join(" / ")} Achievements
           </h2>
           <div className="flex justify-center flex-wrap gap-5 px-4">

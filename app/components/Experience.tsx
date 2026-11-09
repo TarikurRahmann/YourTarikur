@@ -4,7 +4,8 @@ import CustomSection from "./custom/CustomSection";
 import DynamicCarousel from "./custom/DynamicCarousel";
 import StickyAvatar from "./custom/StickyAvatar";
 import { motion, useScroll } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 interface ExperienceItem {
   year: string;
@@ -48,12 +49,10 @@ const GridLine = () => {
   return (
     <div className="relative row-span-4 lg:absolute lg:h-full lg:w-full ">
       <div
-        className="z-10 w-0.5 from-gray-100 absolute left-1/2 h-full"
+        className="absolute left-1/2 z-10 h-full w-px"
         style={{
           backgroundImage:
-            "linear-gradient(180deg, transparent, transparent 50%, var(--tw-gradient-from) 50%, var(--tw-gradient-from) 100%)",
-          backgroundSize: "2px 8px",
-          backgroundRepeat: "repeat-y",
+            "linear-gradient(to bottom, transparent, var(--experience-line) 8%, var(--experience-line) 92%, transparent)",
         }}
       ></div>
     </div>
@@ -61,30 +60,16 @@ const GridLine = () => {
 };
 
 const GridLineGradiant = ({ position }: { position: string }) => {
-  let background = "";
-  if (position === "top") {
-    background =
-      "linear-gradient(to bottom, var(--bg-color-light), transparent)";
-  } else if (position === "bottom") {
-    background = "linear-gradient(to top, var(--bg-color-light), transparent)";
-  }
-
   return (
     <>
       <div className="h-15"></div>
       <div
-        className="z-10 w-0.5 from-gray-100 absolute left-1 -mt-15 h-15 lg:left-1/2"
+        className="absolute left-1 z-10 -mt-15 h-15 w-px lg:left-1/2"
         style={{
           backgroundImage:
-            "linear-gradient(180deg, transparent, transparent 50%, var(--tw-gradient-from) 50%, var(--tw-gradient-from) 100%)",
-          backgroundSize: "2px 8px",
-          backgroundRepeat: "repeat-y",
-        }}
-      ></div>
-      <div
-        className="absolute left-0 z-20 -mt-15 h-15 w-2 lg:left-1/2 lg:-ml-px"
-        style={{
-          background: background,
+            position === "top"
+              ? "linear-gradient(to bottom, transparent, var(--experience-line))"
+              : "linear-gradient(to top, transparent, var(--experience-line))",
         }}
       ></div>
     </>
@@ -102,6 +87,7 @@ const ListItemRow = ({
   listItemScrollIndex: number;
   setListItemScrollIndex: React.Dispatch<React.SetStateAction<number>>;
 }) => {
+  const { darkMode } = useContext(ThemeContext);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -132,7 +118,11 @@ const ListItemRow = ({
     <motion.div ref={ref} className="lg:pb-20 lg:relative pt-1">
       <WhiteDot position="top" visible={opacity === 1} />
       <div style={{ opacity }} className="transition-opacity duration-300">
-        {listItem.year && <p className="mb-4 text-sm text-slate-400">{listItem.year}</p>}
+        {listItem.year && (
+          <p className="mb-4 text-sm text-slate-400">
+            {listItem.year}
+          </p>
+        )}
         <h3 className="-mt-2.5 mb-2 font-semibold text-3xl text-slate-900 dark:text-white">
           {listItem.title}
         </h3>
@@ -158,7 +148,10 @@ const ListItemRow = ({
           ))}
         </div>
         <div className="mt-6 mb-10 w-full overflow-hidden lg:hidden">
-          <DynamicCarousel images={listItem.image} />
+          <DynamicCarousel
+            images={listItem.image}
+            altContext={`${listItem.title} — ${listItem.subtitle}`}
+          />
         </div>
       </div>
     </motion.div>
@@ -173,11 +166,23 @@ const Experience = ({
   title: string;
 }) => {
   const [listItemScrollIndex, setListItemScrollIndex] = useState(0);
+  const { darkMode } = useContext(ThemeContext);
+  const experienceSurface = darkMode ? "#1b263e" : "#f8fafc";
+  const experienceSurfaceStyle: React.CSSProperties & {
+    "--bg-color-light": string;
+    "--experience-line": string;
+  } = {
+    backgroundColor: experienceSurface,
+    "--bg-color-light": experienceSurface,
+    "--experience-line": darkMode
+      ? "rgba(167, 139, 250, 0.55)"
+      : "rgba(124, 58, 237, 0.38)",
+  };
 
   return (
     <CustomSection
-      className="min-h-screen border-t border-t-white border-b border-b-white"
-      style={{ backgroundColor: "var(--bg-color-light)" }}
+      className="min-h-screen border-y border-slate-200 dark:border-white/10"
+      style={experienceSurfaceStyle}
     >
       <h2 className="py-20 text-center text-4xl font-bold tracking-tight">{title}</h2>
       <div className="relative">
@@ -213,6 +218,7 @@ const Experience = ({
                 {/* অ্যারে ক্র্যাশ প্রটেকশন সহ ক্যারোসেল মাউন্ট */}
                 <DynamicCarousel
                   images={SectionTopic[listItemScrollIndex]?.image || []}
+                  altContext={`${SectionTopic[listItemScrollIndex]?.title ?? "Professional"} — ${SectionTopic[listItemScrollIndex]?.subtitle ?? "experience"}`}
                 />
               </motion.div>
             </div>

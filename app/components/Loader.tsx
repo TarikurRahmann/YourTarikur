@@ -42,7 +42,7 @@ const Loader = ({ setLoading }: { setLoading: (v: boolean) => void }) => {
           className="w-20 h-20 rounded-full overflow-hidden relative"
         >
           <Image
-            src="/assets/avater.png"
+            src="/assets/avater.webp"
             alt="Tarikur Rahman - Robotics & IoT Engineer Avatar"
             fill
             quality={80}

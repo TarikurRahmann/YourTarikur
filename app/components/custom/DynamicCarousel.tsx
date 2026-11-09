@@ -8,7 +8,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const DynamicCarousel = ({ images }: { images: string[] }) => {
+const DynamicCarousel = ({
+  images,
+  altContext,
+}: {
+  images: string[];
+  altContext: string;
+}) => {
   useEffect(() => {}, [images]);
 
   if (!images || images.length === 0) return null;
@@ -32,7 +38,7 @@ const DynamicCarousel = ({ images }: { images: string[] }) => {
         <SwiperSlide key={index} className="slide">
           <Image
             src={image}
-            alt={`Experience ${index + 1}`}
+            alt={`${altContext}, experience image ${index + 1}`}
             width={500}
             height={500}
             className="rounded-xl lg:max-w-sm xl:max-w-md aspect-square object-cover"

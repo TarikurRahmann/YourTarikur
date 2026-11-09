@@ -152,6 +152,7 @@ interface ChatBubbleProps {
 
 interface ScrollImageProps {
   src: string;
+  alt: string;
   step: number;
   activeStep: number;
   imageRef: React.RefObject<HTMLDivElement | null>;
@@ -353,6 +354,7 @@ const PhantomX = () => {
                   <div key={step.id} className="flex flex-col gap-6">
                     <ScrollImage
                       src={step.image}
+                      alt={`${PHANTOM_X.title} — ${step.title}`}
                       step={step.id}
                       activeStep={activeStep}
                       imageRef={stepRefs[index]}
@@ -492,7 +494,7 @@ const PhantomX = () => {
                     <div className="relative w-full h-100 overflow-hidden rounded-2xl">
                       <Image
                         src={img}
-                        alt={`Development Phase ${index + 1}`}
+                        alt={`${PHANTOM_X.title} — ${PHANTOM_X.aboutMe.title}, development photo ${index + 1}`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 700px"
@@ -509,7 +511,7 @@ const PhantomX = () => {
 
               <div className="order-4 lg:order-none">
                 <a
-                  href="https://github.com/yourtarikur"
+                  href="https://github.com/tarikurrahmann"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -650,6 +652,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({
 
 const ScrollImage: React.FC<ScrollImageProps> = ({
   src,
+  alt,
   step,
   activeStep,
   imageRef,
@@ -686,7 +689,7 @@ const ScrollImage: React.FC<ScrollImageProps> = ({
       <div className="rounded-2xl overflow-hidden border-4 border-emerald-500/20 shadow-2xl bg-black/5 dark:bg-white/5 transition-all duration-500 group-hover:border-emerald-500/50">
         <Image
           src={src}
-          alt={`Step ${step}`}
+          alt={alt}
           width={1200}
           height={800}
           className="w-full h-auto object-contain"

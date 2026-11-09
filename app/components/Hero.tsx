@@ -76,7 +76,7 @@ const Hero = () => {
                 className="w-14 h-14 md:w-20 md:h-20 mr-4 rounded-full overflow-hidden relative"
               >
                 <Image
-                  src="/assets/avater2.png"
+                  src="/images/profile/tarikur-rahman-profile.webp"
                   alt="Tarikur Rahman - Robotics & IoT Engineer Avatar"
                   width={80}
                   height={80}

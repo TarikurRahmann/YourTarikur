@@ -9,9 +9,6 @@ export default function PhantomXPage() {
       {/* 1. NAVBAR INTEGRATION */}
       <Navbar />
 
-      {/* Background radial gradient overlay matching global design */}
-      <div className="custom-gradient-grid pointer-events-none fixed inset-0 z-0 opacity-40 dark:opacity-60" />
-
       <main className="container relative z-10 mx-auto px-6 py-16 md:px-12 lg:px-20 lg:py-24">
         
         {/* 2. HERO SECTION & PROJECT OVERVIEW */}
@@ -40,7 +37,7 @@ export default function PhantomXPage() {
 
             <div className="rounded-xl border border-slate-300 dark:border-slate-800 bg-[#b1cfee]/20 dark:bg-[#1b263e]/50 backdrop-blur-sm p-5 text-center">
               <div className="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 mb-1">Timeline</div>
-              <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Sep – May</div>
+              <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Sep 2025 – May 2026</div>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Research to Development</p>
             </div>
 
@@ -228,7 +225,7 @@ export default function PhantomXPage() {
             <h2 className="text-2xl font-bold mb-6 text-purple-600 dark:text-purple-400">Future Enhancements</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">a. DEMON-71 Drone Integration</h4>
+                <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-1">a. DEMON71 Drone Integration</h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Aerial companion drone integration for extended flight, mapping, and surveillance.</p>
               </div>
               <div>

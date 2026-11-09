@@ -12,22 +12,22 @@ const siteName = "Tarikur Rahman";
 const pageTitle = "Tarikur Rahman — Robotics Inventor & Tech Researcher";
 const siteDescription =
   "Tarikur Rahman is a Robotics Inventor & Tech Researcher specializing in autonomous systems, defense rovers (PHANTOM-X), firefighting robotics, and IoT.";
+const socialProfiles = [
+  "https://linkedin.com/in/tarikurrahmann",
+  "https://x.com/tarikurrahmann",
+  "https://github.com/tarikurrahmann",
+  "https://tiktok.com/@tarikurrahmann",
+  "https://facebook.com/tarikurrahmann",
+];
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: siteName,
-  image: "https://yourtarikur.vercel.app/assets/avater2.svg",
+  image: "https://yourtarikur.vercel.app/images/profile/tarikur-rahman-profile.webp",
   jobTitle: "System Architect & Robotics Inventor",
   url: baseUrl,
-  sameAs: [
-    "https://www.linkedin.com/in/tarikurrahmanbd/",
-    "https://github.com/tarikurrahmanbd",
-    "https://yourtarikur.netlify.app/",
-    "https://www.facebook.com/tarikurrahmanbd",
-    "https://x.com/tarikurrahmanbd",
-    "https://www.instagram.com/tarikurrahmanbd/",
-  ],
+  sameAs: socialProfiles,
   description: siteDescription,
   affiliation: {
     "@type": "EducationalOrganization",
@@ -91,17 +91,9 @@ const websiteSchema = {
     "@type": "Person",
     name: siteName,
     url: baseUrl,
-    sameAs: [
-      "https://www.linkedin.com/in/tarikurrahmanbd/",
-      "https://github.com/tarikurrahmanbd",
-      "https://yourtarikur.netlify.app/",
-    ],
+    sameAs: socialProfiles,
   },
-  citation: [
-    "https://github.com/tarikurrahmanbd",
-    "https://www.linkedin.com/in/tarikurrahmanbd/",
-    "https://yourtarikur.netlify.app/",
-  ],
+  citation: socialProfiles,
   about: {
     "@type": "Person",
     name: siteName,
@@ -169,30 +161,36 @@ const navigationSchema = {
     {
       "@type": "SiteNavigationElement",
       position: 4,
+      name: "AETHER-H1",
+      url: `${baseUrl}/projects/AETHER-H1`,
+    },
+    {
+      "@type": "SiteNavigationElement",
+      position: 5,
       name: "PHOENIX-F1",
       url: `${baseUrl}/projects/PHOENIX-F1`,
     },
     {
       "@type": "SiteNavigationElement",
-      position: 5,
+      position: 6,
       name: "PHANTOM-X",
       url: `${baseUrl}/projects/PHANTOM-X`,
     },
     {
       "@type": "SiteNavigationElement",
-      position: 6,
+      position: 7,
       name: "Awards",
       url: `${baseUrl}/#awards`,
     },
     {
       "@type": "SiteNavigationElement",
-      position: 7,
+      position: 8,
       name: "Gallery",
       url: `${baseUrl}/#gallery`,
     },
     {
       "@type": "SiteNavigationElement",
-      position: 8,
+      position: 9,
       name: "Contact",
       url: `${baseUrl}/#contact`,
     },
@@ -217,6 +215,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: pageTitle,
   description: siteDescription,
+  authors: [{ name: siteName, url: baseUrl }],
   keywords: [
     "Tarikur Rahman",
     "Robotics Inventor",
@@ -230,6 +229,7 @@ export const metadata: Metadata = {
     "Team DEMON71",
     "YOLOv12 AI",
     "WICE 2026 Gold Medalist",
+    "ATLÂNTIA International STEM Olympiad 2026 Gold Medalist",
     "Tarikur Rahman Alif Shubhan Chowdhury Govt College",
     "Tarikur Rahman Bahubal",
     "Tarikur Rahman Habiganj",
@@ -249,7 +249,6 @@ export const metadata: Metadata = {
     "React",
     "ESP32",
   ],
-  authors: [{ name: siteName, url: baseUrl }],
   alternates: {
     canonical: baseUrl,
   },
@@ -265,7 +264,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/og-image.png`,
+        url: `${baseUrl}/og-image.webp`,
         width: 1200,
         height: 630,
         alt: "Tarikur Rahman portfolio preview",
@@ -276,9 +275,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: siteDescription,
-    creator: "@tarikurrahman",
-    site: "@tarikurrahman",
-    images: [`${baseUrl}/og-image.png`],
+    creator: "@tarikurrahmann",
+    site: "@tarikurrahmann",
+    images: [`${baseUrl}/og-image.webp`],
   },
 };
 
@@ -290,9 +289,10 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="VgZOprZeFUhJtwPo90MZ_me4iG6f84Jb9EA_bCZFgp8" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" as="image" href="/assets/avater2.svg" />
+        <link rel="preload" as="image" href="/images/profile/tarikur-rahman-profile.webp" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

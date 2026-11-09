@@ -11,24 +11,19 @@ import "swiper/css/navigation";
 
 const slides = [
   {
-    image: "/assets/projects/IubBongomarine.png",
+    image: "/images/projects/aether-h1-home-automation.webp",
+    title: "AETHER-H1",
+    description: "Smart home IoT automation",
+  },
+  {
+    image: "/images/projects/phantom-x-rover-hero.webp",
     title: "PHANTOM-X",
     description: "Defense Rover for Team DEMON71",
   },
   {
-    image: "/assets/projects/Shuchimita-circuit.jpg",
+    image: "/images/projects/phoenix-f1-rover-circuit.webp",
     title: "PHOENIX-F1",
     description: "Firefighting Defense Rover",
-  },
-  {
-    image: "/assets/projects/Shuchimita.png",
-    title: "AETHER-H1",
-    description: "Global IoT Home Automation",
-  },
-  {
-    image: "/assets/projects/Incubator-circuit.jpg",
-    title: "Sohoje Vara",
-    description: "12 daily essential service providers in one app",
   },
 ];
 

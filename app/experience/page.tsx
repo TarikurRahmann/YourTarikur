@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/og-image.png`,
+        url: `${baseUrl}/og-image.webp`,
         width: 1200,
         height: 630,
         alt: "Tarikur Rahman experience preview",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Experience | Tarikur Rahman",
     description: "Read about Tarikur Rahman’s leadership, robotics, and engineering experience through Team DEMON71 and other initiatives.",
-    images: [`${baseUrl}/og-image.png`],
+    images: [`${baseUrl}/og-image.webp`],
   },
 };
 

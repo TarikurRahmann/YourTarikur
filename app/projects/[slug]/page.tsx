@@ -10,7 +10,6 @@ const projectMap: Record<string, { title: string; description: string; content: 
     description: "PHANTOM-X is an autonomous tactical defense rover built by Tarikur Rahman for reconnaissance, mine detection, and remote neutralization.",
     content: (
       <div className="relative min-h-screen text-[#111827] dark:text-[#f8fafc] transition-colors duration-500">
-        <div className="custom-gradient-grid pointer-events-none fixed inset-0 z-0 opacity-40 dark:opacity-60" />
         <main className="container relative z-10 mx-auto px-6 pt-28 pb-16 md:px-12 lg:px-20 lg:pt-32 lg:pb-24">
           <section className="mb-16 text-center lg:mb-24">
             <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400 border border-purple-500/20 mb-6">
@@ -31,7 +30,7 @@ const projectMap: Record<string, { title: string; description: string; content: 
               </div>
               <div className="rounded-xl border border-slate-300 dark:border-slate-800 bg-[#b1cfee]/20 dark:bg-[#1b263e]/50 backdrop-blur-sm p-5 text-center">
                 <div className="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 mb-1">Timeline</div>
-                <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Sep – May</div>
+                <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Sep 2025 – May 2026</div>
               </div>
               <div className="rounded-xl border border-slate-300 dark:border-slate-800 bg-[#b1cfee]/20 dark:bg-[#1b263e]/50 backdrop-blur-sm p-5 text-center">
                 <div className="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 mb-1">Field Test Status</div>
@@ -50,7 +49,6 @@ const projectMap: Record<string, { title: string; description: string; content: 
     description: "PHOENIX-F1 is an automated industrial firefighting robot built by Tarikur Rahman featuring thermal intelligence and real-time navigation.",
     content: (
       <div className="relative min-h-screen text-[#111827] dark:text-[#f8fafc] transition-colors duration-500">
-        <div className="custom-gradient-grid pointer-events-none fixed inset-0 z-0 opacity-40 dark:opacity-60" />
         <main className="container relative z-10 mx-auto px-6 pt-28 pb-16 md:px-12 lg:px-20 lg:pt-32 lg:pb-24">
           <section className="mb-16 text-center lg:mb-24">
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 mb-6">
@@ -71,7 +69,7 @@ const projectMap: Record<string, { title: string; description: string; content: 
               </div>
               <div className="rounded-xl border border-slate-300 dark:border-slate-800 bg-[#b1cfee]/20 dark:bg-[#1b263e]/50 backdrop-blur-sm p-5 text-center">
                 <div className="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 mb-1">Timeline</div>
-                <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Dec – Feb</div>
+                <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Dec 2023 – Feb 2024</div>
               </div>
               <div className="rounded-xl border border-slate-300 dark:border-slate-800 bg-[#b1cfee]/20 dark:bg-[#1b263e]/50 backdrop-blur-sm p-5 text-center">
                 <div className="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 mb-1">Status</div>
@@ -121,7 +119,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: `${baseUrl}/og-image.webp`,
           width: 1200,
           height: 630,
           alt: `${project.title} project preview`,
@@ -132,7 +130,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: project.title,
       description: project.description,
-      images: [`${baseUrl}/og-image.png`],
+      images: [`${baseUrl}/og-image.webp`],
     },
   };
 }

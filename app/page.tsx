@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import Link from "next/link";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -35,14 +36,15 @@ export default function Home() {
 
           <nav aria-label="Main navigation" className="sr-only">
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/#skills">Skills</a></li>
-              <li><a href="/#experience">Experience</a></li>
-              <li><a href="/projects/PHOENIX-F1">PHOENIX-F1</a></li>
-              <li><a href="/projects/PHANTOM-X">PHANTOM-X</a></li>
-              <li><a href="/#awards">Awards</a></li>
-              <li><a href="/#gallery">Gallery</a></li>
-              <li><a href="/#contact">Contact</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/#skills">Skills</Link></li>
+              <li><Link href="/#experience">Experience</Link></li>
+              <li><Link href="/projects/AETHER-H1">AETHER-H1</Link></li>
+              <li><Link href="/projects/PHOENIX-F1">PHOENIX-F1</Link></li>
+              <li><Link href="/projects/PHANTOM-X">PHANTOM-X</Link></li>
+              <li><Link href="/#awards">Awards</Link></li>
+              <li><Link href="/#gallery">Gallery</Link></li>
+              <li><Link href="/#contact">Contact</Link></li>
             </ul>
           </nav>
 

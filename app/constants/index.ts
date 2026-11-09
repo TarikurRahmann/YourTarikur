@@ -1,39 +1,41 @@
 // Skill icons (from public/assets/skills/)
-const fusion360Icon = "/assets/skills/fusion360.png";
-const pythonIcon = "/assets/skills/python.png";
-const arduinoIcon = "/assets/skills/arduino.png";
-const esp32Icon = "/assets/skills/esp32.png";
-const raspberrypi = "/assets/skills/raspberrypi.png";
-const robotIcon = "/assets/skills/robotics.png";
-const kicadIcon = "/assets/skills/kicad.png";
-const proteusIcon = "/assets/skills/proteus.png";
-const tinkercadIcon = "/assets/skills/tinkercad.png";
-const javascriptIcon = "/assets/skills/node.png";
-const typescriptIcon = "/assets/skills/react.png";
-const gitIcon = "/assets/skills/git.png";
-const githubIcon = "/assets/skills/github.png";
-const latexIcon = "/assets/skills/framermotion.png";
-const matlabIcon = "/assets/skills/matlab.png";
-const d71Icon = "/assets/skills/d71.png";
-const robohaatbdIcon = "/assets/skills/robohaat.png";
+const fusion360Icon = "/images/skills/skill-fusion-360.webp";
+const pythonIcon = "/images/skills/skill-python.webp";
+const arduinoIcon = "/images/skills/skill-arduino.webp";
+const esp32Icon = "/images/skills/skill-esp32.webp";
+const raspberrypi = "/images/skills/skill-raspberry-pi.webp";
+const robotIcon = "/images/skills/skill-robotics.webp";
+const kicadIcon = "/images/skills/skill-kicad.webp";
+const proteusIcon = "/images/skills/skill-proteus.webp";
+const tinkercadIcon = "/images/skills/skill-tinkercad.webp";
+const javascriptIcon = "/images/skills/skill-javascript.webp";
+const typescriptIcon = "/images/skills/skill-typescript.webp";
+const gitIcon = "/images/skills/skill-git.webp";
+const githubIcon = "/images/skills/skill-github.webp";
+const latexIcon = "/images/skills/skill-latex.webp";
+const matlabIcon = "/images/skills/skill-matlab.webp";
+const d71Icon = "/images/skills/skill-demon71.webp";
+const robohaatbdIcon = "/images/skills/skill-robo-haat-bd.webp";
 
 // Award logos (from public/assets/awards/)
-const WiceLogo = "/assets/awards/WiceLogo.png";
-const NMSTLogo = "/assets/awards/NMSTLogo.png";
-const NSFLogo = "/assets/awards/NSFLogo.png";
-const BSALogo = "/assets/awards/BSALogo.png";
-const GOBBLogo = "/assets/awards/GOBBLogo.png";
-const GOBLogo = "/assets/awards/GOBLogo.png";
+const WiceLogo = "/images/awards/wice-competition-logo.webp";
+const NMSTLogo = "/images/awards/national-museum-science-technology-logo.webp";
+const NSFLogo = "/images/awards/national-science-fest-logo.webp";
+const BSALogo = "/images/awards/bangladesh-shishu-academy-logo.webp";
+const GOBBLogo = "/images/awards/government-bangladesh-logo.webp";
+const GOBLogo = "/images/awards/bangladesh-government-logo.webp";
+const FIRSO2026Logo = "/images/awards/firso-2026-logo.webp";
+const AtlantiaLogo = "/images/awards/atlantia-stem-olympiad-logo.webp";
 
 // Project images (from public/assets/projects/)
-const DEMON71 = "/assets/projects/DEMON71.png";
-const DEMON712 = "/assets/projects/DEMON712.png";
-const ROBOHAATBD = "/assets/projects/ROBOHAATBD.jpg";
-const ROBOHAATBD2 = "/assets/projects/ROBOHAATBD2.jpg";
-const UBC = "/assets/projects/UBC.jpg";
-const UBC2 = "/assets/projects/UBC2.jpg";
-const UBCB = "/assets/projects/UBCB.jpg";
-const UBCB2 = "/assets/projects/UBCB2.jpg";
+const DEMON71 = "/images/experience/team-demon71-system-architecture.webp";
+const DEMON712 = "/images/experience/team-demon71-img-2609.webp";
+const ROBOHAATBD = "/images/experience/robo-haat-bd-founder-work.webp";
+const ROBOHAATBD2 = "/images/experience/robo-haat-bd-founder-profile.webp";
+const UBC = "/images/experience/udvaboni-biggan-club-research.webp";
+const UBC2 = "/images/experience/udvaboni-biggan-club-research-editor-event.webp";
+const UBCB = "/images/experience/udvaboni-club-bahubal-workshop.webp";
+const UBCB2 = "/images/experience/udvaboni-club-bahubal-rover-controller.webp";
 
 export const HERO_CONTENT = `I am a multidisciplinary inventor and tech researcher driven by the passion to turn abstract imagination into physical reality. From developing autonomous robotic platforms and training custom AI surveillance models to engineering high-performance web applications, I create systems that bridge the gap between intelligent hardware and software. Proficient across C++, Python, and full-stack web architectures, I don't just write code—I build connected solutions with absolute precision. Let's build something extraordinary together.`;
 
@@ -144,6 +146,7 @@ export const AWARDS: Record<
   string,
   Array<{
     year: string;
+    date?: string;
     position: string;
     event: string;
     description: string;
@@ -152,58 +155,110 @@ export const AWARDS: Record<
     logoDark?: string;
     logoSecondary?: string;
     logos?: string[];
+    projectTimelineLogoSize?: number;
+    projects?: string[];
+    qualification?: string;
+    qualificationFlag?: string;
   }>
 > = {
   National: [
     {
       year: "2026",
+      date: "2026-11-06",
       position: "Gold Medalist",
-      event: "8th World Invention Competition and Exhibition (WICE) 2026",
-      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we earned the Gold Medal at the 8th World Invention Competition and Exhibition (WICE) 2026 with our DEMON71 second-generation defense rover. We competed in the IoT & Robotics segment under the Project Display category at Northern University Bangladesh on 9 May 2026. The competition was organized by Dreams of Bangladesh and the Indonesian Young Scientist Association (IYSA).`,
+      event: "ATLÂNTIA International STEM Olympiad 2026",
+      description: "As Team DEMON71 from Alif Subhan Chowdhury Government College, we earned the Gold Medal at the ATLÂNTIA International STEM Olympiad 2026 with our PHANTOM-X second-generation defense rover, directly qualifying for the International Round in Turkey. We competed in the Artificial Intelligence segment under the Technology & Innovation category at Leading University, Sylhet on 6 November 2026. The event was organized by General Science Olympiad.",
       link: "#",
-      logo: WiceLogo,
+      logo: AtlantiaLogo,
+      projects: ["PHANTOM-X"],
+      qualification: "Qualified for the International Round in Turkey",
+      qualificationFlag: "/images/flags/turkey.svg",
     },
     {
       year: "2026",
+      date: "2026-05-09",
+      position: "Gold Medalist",
+      event: "8th World Invention Competition and Exhibition (WICE) 2026",
+      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we earned the Gold Medal at the 8th World Invention Competition and Exhibition (WICE) 2026 with our PHANTOM-X second-generation defense rover, directly qualifying for the International Round in Malaysia. We competed in the IoT & Robotics segment under the Project Display category at Northern University Bangladesh on 9 May 2026. The competition was organized by Dreams of Bangladesh and the Indonesian Young Scientist Association (IYSA).`,
+      link: "#",
+      logo: WiceLogo,
+      projects: ["PHANTOM-X"],
+      qualification: "Qualified for the International Round in Malaysia",
+      qualificationFlag: "/images/flags/malaysia.svg",
+    },
+    {
+      year: "2026",
+      date: "2026-06-14",
       position: "Special 5th Place",
       event: "47th National Science & Technology Week 2026",
-      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved Special 5th Place at the 47th National Science & Technology Week 2026 National Science Fair with our DEMON71 second-generation defense rover. We competed at the National Science & Technology Complex, Agargaon, Dhaka from 14–16 June 2026. The event was organized by the National Museum of Science and Technology and the Ministry of Science and Technology, Bangladesh.`,
+      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved Special 5th Place at the national-level round of the 47th National Science & Technology Week 2026 with our PHANTOM-X second-generation defense rover. We competed at the National Science & Technology Complex, Agargaon, Dhaka from 14–16 June 2026. The event was organized by the National Museum of Science and Technology and the Ministry of Science and Technology, Bangladesh.`,
       link: "#",
       logos: [NMSTLogo, GOBLogo],
+      projects: ["PHANTOM-X"],
+    },
+    {
+      year: "2026",
+      date: "2026-09-04",
+      position: "Finalist (National Round)",
+      event: "Fibonacci International Robot & STEM Olympiad 2026",
+      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we participated in the Fibonacci International Robot & STEM Olympiad 2026 and emerged as Finalists in the National Round with our PHANTOM-X second-generation defense rover. We competed at United International University (UIU), Dhaka on 4 September 2026. The event was organized by General Science Olympiad.`,
+      link: "#",
+      logo: FIRSO2026Logo,
+      projects: ["PHANTOM-X"],
     },
     {
       year: "2025",
+      date: "2025-10-11",
       position: "Finalist",
       event: "National Science Fest 2025",
-      description: `As a member of Udvaboni Biggan Club, Bahubal, we participated in the National Science Fest 2025 with our developed Autonomous Home & Fire Fighting Robot. Our project was selected among the Top 10 finalists in the competition, which took place at the Bangladesh Shishu Academy, Dhaka on 11 October 2025. The event was organized by Phulkuri Ashar in collaboration with the Bangladesh Shishu Academy.`,
+      description: `As a member of Udvaboni Biggan Club, Bahubal, we participated in the National Science Fest 2025 with our AETHER-H1 and PHOENIX-F1 projects. Our projects were selected among the Top 10 finalists in the competition, which took place at the Bangladesh Shishu Academy, Dhaka on 11 October 2025. The event was organized by Phulkuri Ashar in collaboration with the Bangladesh Shishu Academy.`,
       link: "#",
       logo: NSFLogo,
+      projectTimelineLogoSize: 80,
+      projects: ["AETHER-H1", "PHOENIX-F1"],
     },
   ],
   "Division,District,Upazila": [
     {
       year: "2026",
+      date: "2026-05-15",
       position: "1st Place (Divisional Level)",
-      event: "47th National Science & Technology Fair 2026",
-      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved 1st Place at the Sylhet Divisional Level of the 47th National Science & Technology Fair 2026 with our DEMON71 second-generation defense rover. We competed at the Mohammad Ali Gymnasium, Rikabibazar, Sylhet from 15–17 May 2026.`,
+      event: "47th National Science & Technology Week 2026",
+      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved 1st Place at the Sylhet Divisional Level of the 47th National Science & Technology Week 2026 with our PHANTOM-X second-generation defense rover. We competed at the Mohammad Ali Gymnasium, Rikabibazar, Sylhet from 15–17 May 2026.`,
       link: "#",
       logos: [NMSTLogo, GOBLogo],
+      projects: ["PHANTOM-X"],
     },
     {
       year: "2026",
+      date: "2026-04-18",
       position: "1st Place (District Level)",
-      event: "47th National Science & Technology Fair 2026",
-      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved 1st Place at the Habiganj District Level of the 47th National Science & Technology Fair 2026 with our DEMON71 second-generation defense rover. We competed at the Zilla Parishad Auditorium, Habiganj from 18–20 April 2026.`,
+      event: "47th National Science & Technology Week 2026",
+      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved 1st Place at the Habiganj District Level of the 47th National Science & Technology Week 2026 with our PHANTOM-X second-generation defense rover. We competed at the Zilla Parishad Auditorium, Habiganj from 18–20 April 2026.`,
       link: "#",
       logos: [NMSTLogo, GOBLogo],
+      projects: ["PHANTOM-X"],
     },
     {
       year: "2026",
+      date: "2026-04-15",
       position: "1st Place (Upazila Level)",
-      event: "47th National Science & Technology Fair 2026",
-      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved 1st Place at the Bahubal Upazila Level of the 47th National Science & Technology Fair 2026 with our DEMON71 second-generation defense rover. We competed at the Upazila Parishad Auditorium, Bahubal on 15 April 2026.`,
+      event: "47th National Science & Technology Week 2026",
+      description: `As Team DEMON71 from Alif Subhan Chowdhury Government College, we achieved 1st Place at the Bahubal Upazila Level of the 47th National Science & Technology Week 2026 with our PHANTOM-X second-generation defense rover. We competed at the Upazila Parishad Auditorium, Bahubal on 15 April 2026.`,
       link: "#",
       logos: [NMSTLogo, GOBLogo],
+      projects: ["PHANTOM-X"],
+    },
+    {
+      year: "2024",
+      date: "2024-06-24",
+      position: "1st Place (Upazila Level)",
+      event: "45th National Science & Technology Week 2024",
+      description: `Representing Sunshine Model School & College, achieved 1st Place at the Bahubal Upazila Level of the 45th National Science & Technology Week 2024 in the Science Project category on 24 June 2024 at Bahubal, Habiganj. Organized by the National Museum of Science and Technology and the Ministry of Science and Technology, Bangladesh.`,
+      link: "#",
+      logos: [NMSTLogo, GOBLogo],
+      projectTimelineLogoSize: 80,
+      projects: ["PHOENIX-F1"],
     },
     {
       year: "2022",
@@ -224,13 +279,22 @@ export const AWARDS: Record<
   ],
 };
 
+export const UPCOMING_PROJECT_EVENTS: Array<{
+  year: string;
+  date: string;
+  event: string;
+  location: string;
+  logos: string[];
+  project: string;
+}> = [];
+
 export const CONTACT = {
   address: "Sylhet, Bangladesh",
   email: "tarikurrahman2008@gmail.com",
-  linkedin: "https://www.linkedin.com/in/tarikurrahmanbd/",
+  linkedin: "https://linkedin.com/in/tarikurrahmann",
+  x: "https://x.com/tarikurrahmann",
   scholar: "https://scholar.google.com/citations?user=YOUR_ID", // এখানে আপনার আসল Google Scholar ID বসাবেন
-  facebook: "https://www.facebook.com/tarikurrahman08/",
-  instagram: "https://www.instagram.com/tarikurrahman08/",
-  tiktok: "https://www.tiktok.com/@tarikurrahman.bd/",
-  github: "https://github.com/tarikurrahmanbd",
+  facebook: "https://facebook.com/tarikurrahmann",
+  tiktok: "https://tiktok.com/@tarikurrahmann",
+  github: "https://github.com/tarikurrahmann",
 };

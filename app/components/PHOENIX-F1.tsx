@@ -4,9 +4,6 @@ import { Flame, ShieldAlert, Cpu, Award, Code, CheckCircle, ArrowRight } from 'l
 export default function PhoenixF1Page() {
   return (
     <div className="relative min-h-screen text-[#111827] dark:text-[#f8fafc] transition-colors duration-500">
-      {/* Background radial gradient overlay matching global design */}
-      <div className="custom-gradient-grid pointer-events-none fixed inset-0 z-0 opacity-40 dark:opacity-60" />
-
       <main className="container relative z-10 mx-auto px-6 py-16 md:px-12 lg:px-20 lg:py-24">
         
         {/* 1. HERO SECTION & PROJECT OVERVIEW */}
@@ -35,7 +32,7 @@ export default function PhoenixF1Page() {
 
             <div className="rounded-xl border border-slate-300 dark:border-slate-800 bg-[#b1cfee]/20 dark:bg-[#1b263e]/50 backdrop-blur-sm p-5 text-center">
               <div className="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 mb-1">Timeline</div>
-              <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Dec – Feb</div>
+              <div className="text-lg font-semibold text-slate-800 dark:text-slate-100">Dec 2023 – Feb 2024</div>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Research & Development</p>
             </div>
 
