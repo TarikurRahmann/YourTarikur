@@ -1,6 +1,7 @@
 ﻿"use client";
 
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaExpandAlt, FaTimes, FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -77,6 +78,33 @@ const Gallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const { darkMode } = useContext(ThemeContext);
 
+  useEffect(() => {
+    if (selectedIndex === null) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedIndex(null);
+      if (event.key === "ArrowRight") {
+        setSelectedIndex((index) =>
+          index === null ? null : (index + 1) % galleryImages.length
+        );
+      }
+      if (event.key === "ArrowLeft") {
+        setSelectedIndex((index) =>
+          index === null ? null : (index - 1 + galleryImages.length) % galleryImages.length
+        );
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedIndex]);
+
   const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     if (selectedIndex !== null) {
@@ -94,12 +122,13 @@ const Gallery = () => {
   const selectedImage = selectedIndex !== null ? galleryImages[selectedIndex] : null;
 
   return (
-    <CustomSection
-      className="relative z-10 py-24 overflow-hidden w-full transition-colors duration-300"
-      style={{
-        backgroundColor: darkMode ? "#111e36" : "#ffffff",
-      }}
-    >
+    <>
+      <CustomSection
+        className="relative z-10 py-24 overflow-hidden w-full transition-colors duration-300"
+        style={{
+          backgroundColor: darkMode ? "#111e36" : "#ffffff",
+        }}
+      >
       {/* Background Glow */}
       <div
         className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-175 h-175 blur-[160px] rounded-full pointer-events-none transition-colors duration-300 ${
@@ -130,7 +159,7 @@ const Gallery = () => {
         </div>
 
         {/* Fluid Masonry Grid */}
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 w-full space-y-4">
+        <div className="columns-1 gap-3 min-[480px]:columns-2 sm:gap-4 md:columns-3 lg:columns-4 w-full">
           {galleryImages.map((item, index) => (
             <motion.div
               key={item.id}
@@ -144,84 +173,105 @@ const Gallery = () => {
                 delay: index * 0.05,
                 ease: "easeOut",
               }}
-              onClick={() => setSelectedIndex(index)}
-              className="break-inside-avoid group relative overflow-hidden cursor-pointer w-full rounded-xl border transition-all duration-300 hover:shadow-2xl hover:border-purple-500/50"
+              className="break-inside-avoid group relative mb-3 w-full sm:mb-4"
               style={{
-                borderColor: darkMode ? "#1e293b" : "#e2e8f0",
-                backgroundColor: darkMode ? "#1e293b" : "#f8fafc",
+                color: darkMode ? "#ffffff" : "#0f172a",
               }}
             >
-              <Image
-                src={item.src}
-                alt={item.title}
-                width={800}
-                height={600}
-                className="w-full h-auto object-cover block transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
+              <motion.button
+                type="button"
+                onClick={() => setSelectedIndex(index)}
+                aria-label={`View ${item.title}`}
+                className="relative block w-full overflow-hidden rounded-xl border text-left transition-shadow hover:shadow-2xl focus-visible:ring-2 focus-visible:ring-purple-500"
+                style={{
+                  borderColor: darkMode ? "#1e293b" : "#e2e8f0",
+                  backgroundColor: darkMode ? "#1e293b" : "#f8fafc",
+                }}
+              >
+                <Image
+                  src={item.src}
+                  alt=""
+                  width={800}
+                  height={600}
+                  className="block h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
 
-              {/* Glassmorphic Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 backdrop-blur-[2px]">
-                <div className="flex justify-end">
-                  <span className="text-[10px] font-semibold tracking-wider text-white uppercase bg-purple-600/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-sm">
-                    {item.tag}
-                  </span>
-                </div>
-                <div className="flex items-end justify-between text-white gap-2">
-                  <div>
-                    <p className="text-xs font-semibold line-clamp-1">{item.title}</p>
-                    <p className="text-[10px] text-slate-300 line-clamp-1 mt-0.5 opacity-90">
-                      {item.description}
-                    </p>
+                <div className="absolute inset-0 flex flex-col justify-between bg-linear-to-t from-black/85 via-black/20 to-transparent p-2.5 opacity-100 transition-opacity duration-300 sm:p-4 sm:opacity-0 sm:group-hover:opacity-100">
+                  <div className="flex justify-end">
+                    <span className="rounded-full bg-purple-600/90 px-2 py-1 text-[9px] font-semibold uppercase tracking-wide text-white shadow-sm sm:px-2.5 sm:text-[10px]">
+                      {item.tag}
+                    </span>
                   </div>
-                  <FaExpandAlt className="w-3.5 h-3.5 opacity-80 shrink-0 mb-0.5" />
+                  <div className="flex items-end justify-between gap-1.5 text-white">
+                    <div className="min-w-0">
+                      <p className="line-clamp-2 text-[11px] font-semibold sm:text-xs">
+                        {item.title}
+                      </p>
+                      <p className="mt-0.5 hidden text-[10px] text-slate-300 opacity-90 sm:block">
+                        {item.description}
+                      </p>
+                    </div>
+                    <FaExpandAlt className="mb-0.5 h-3.5 w-3.5 shrink-0 opacity-80" />
+                  </div>
                 </div>
-              </div>
+              </motion.button>
             </motion.div>
           ))}
         </div>
       </div>
+    </CustomSection>
 
-      {/* Lightbox Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            onClick={() => setSelectedIndex(null)}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md select-none"
-          >
+      {typeof document !== "undefined" &&
+        createPortal(
+          <AnimatePresence>
+            {selectedImage && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, pointerEvents: "none" }}
+                transition={{ duration: 0.25 }}
+                onClick={() => setSelectedIndex(null)}
+                className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md select-none"
+                role="dialog"
+                aria-modal="true"
+                aria-label={selectedImage.title}
+              >
             {/* Close Button */}
             <motion.button
+              type="button"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={(e) => {
                 e.stopPropagation();
                 setSelectedIndex(null);
               }}
-              className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              aria-label="Close image viewer"
+              className="absolute right-4 top-[calc(env(safe-area-inset-top)+1rem)] z-50 h-11 w-11 rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6 sm:top-6"
             >
               <FaTimes className="w-5 h-5" />
             </motion.button>
 
             {/* Prev Arrow */}
             <motion.button
+              type="button"
               whileHover={{ scale: 1.1, x: -2 }}
               whileTap={{ scale: 0.9 }}
               onClick={handlePrev}
-              className="absolute left-6 p-4 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors hidden sm:block z-50"
+              aria-label="Previous image"
+              className="absolute left-2 top-1/2 z-50 h-11 w-11 -translate-y-1/2 rounded-full bg-black/50 text-white transition-colors hover:bg-white/20 sm:left-6 sm:h-12 sm:w-12 sm:bg-white/10"
             >
               <FaArrowLeft className="w-5 h-5" />
             </motion.button>
 
             {/* Next Arrow */}
             <motion.button
+              type="button"
               whileHover={{ scale: 1.1, x: 2 }}
               whileTap={{ scale: 0.9 }}
               onClick={handleNext}
-              className="absolute right-6 p-4 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors hidden sm:block z-50"
+              aria-label="Next image"
+              className="absolute right-2 top-1/2 z-50 h-11 w-11 -translate-y-1/2 rounded-full bg-black/50 text-white transition-colors hover:bg-white/20 sm:right-6 sm:h-12 sm:w-12 sm:bg-white/10"
             >
               <FaArrowRight className="w-5 h-5" />
             </motion.button>
@@ -235,20 +285,20 @@ const Gallery = () => {
                 exit={{ scale: 0.9, opacity: 0, y: -10 }}
                 transition={{ type: "spring", damping: 25, stiffness: 250 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative max-w-4xl max-h-[85vh] overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl flex flex-col"
+                className="relative flex max-h-[85dvh] max-w-4xl flex-col overflow-y-auto overscroll-contain rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl"
               >
-                <div className="flex-1 overflow-hidden flex items-center justify-center bg-black/50 p-2">
+                <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-black/50 p-2">
                   <Image
                     src={selectedImage.src}
                     alt={selectedImage.title}
                     width={1200}
                     height={800}
-                    className="max-w-full max-h-[65vh] object-contain mx-auto rounded-lg"
+                    className="mx-auto max-h-[50dvh] max-w-full rounded-lg object-contain sm:max-h-[65vh]"
                   />
                 </div>
 
                 {/* Description and Title in Lightbox */}
-                <div className="p-6 bg-slate-950/95 border-t border-slate-800/80 text-left">
+                <div className="border-t border-slate-800/80 bg-slate-950/95 p-4 text-left sm:p-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[11px] font-bold text-purple-400 uppercase tracking-widest bg-purple-950/60 border border-purple-800/50 px-2.5 py-0.5 rounded-full">
                       {selectedImage.tag}
@@ -266,10 +316,12 @@ const Gallery = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-          </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body
         )}
-      </AnimatePresence>
-    </CustomSection>
+    </>
   );
 };
 
