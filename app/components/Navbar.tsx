@@ -234,12 +234,10 @@ const Navbar = () => {
         </nav>
       </div>
 
-      <AnimatePresence>
-        {menuOpen && (
+      {menuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0, pointerEvents: "none" }}
             transition={{ duration: 0.2 }}
             ref={menuRef}
             id="mobile-navigation"
@@ -342,8 +340,7 @@ const Navbar = () => {
               </Link>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
+      )}
     </>
   );
 };

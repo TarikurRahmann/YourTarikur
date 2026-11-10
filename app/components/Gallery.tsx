@@ -222,14 +222,12 @@ const Gallery = () => {
       </div>
     </CustomSection>
 
-      {typeof document !== "undefined" &&
+      {selectedImage &&
+        typeof document !== "undefined" &&
         createPortal(
-          <AnimatePresence>
-            {selectedImage && (
-              <motion.div
+          <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0, pointerEvents: "none" }}
                 transition={{ duration: 0.25 }}
                 onClick={() => setSelectedIndex(null)}
                 className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md select-none"
@@ -316,9 +314,7 @@ const Gallery = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
-              </motion.div>
-            )}
-          </AnimatePresence>,
+          </motion.div>,
           document.body
         )}
     </>
