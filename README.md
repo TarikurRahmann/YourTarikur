@@ -1,110 +1,93 @@
 <div align="center">
 
-  # 🚀 YourTarikur | Next-Gen Personal Platform
-  
-  **A futuristic, high-performance web application designed for interactive visual showcase, automation, and defense robotics engineering.**
+# YourTarikur
 
-  [![Live Website](https://img.shields.io/badge/Live_Site-yourtarikur.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://yourtarikur.vercel.app)
-  [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TarikurRahman/YourTarikur)
-  [![Framework](https://img.shields.io/badge/Next.js-14+-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-  [![Language](https://img.shields.io/badge/TypeScript-98.9%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+**Personal portfolio of Tarikur Rahman — robotics inventor, system architect, and tech researcher.**
 
-</div>
-
-<!-- Website Full Preview -->
-<div align="center">
-
-  ## 🖥️ Live Preview
-
-  <a href="https://yourtarikur.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀_VISIT_LIVE_SITE-yourtarikur.vercel.app-0070f3?style=for-the-badge&logo=vercel&logoColor=white" alt="Visit Live Site" />
-  </a>
-
-  <br /><br />
-
-  <a href="https://yourtarikur.vercel.app/" target="_blank">
-    <img src="https://github.com/user-attachments/assets/9c0d4153-ad90-42a0-be8c-a4aa5f1829a1" alt="YourTarikur Full Website Preview" width="100%" />
-  </a>
+[![Live Site](https://img.shields.io/badge/Live_Site-yourtarikur.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://yourtarikur.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-App_Router-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 </div>
 
-## 🌟 Overview
+## About
 
-**YourTarikur** is an advanced digital identity and showcase system crafted with Next.js, React, and TypeScript. Built with precision, top-tier UI/UX standards, and modern web standards, this platform reflects cutting-edge technology integrations in **AI Automation**, **Robotics**, and **Interactive Web Graphics**.
+I am a Bangladeshi inventor and technology researcher working across robotics, embedded systems, IoT, AI, and web development. I build connected hardware and software, with a focus on practical engineering and reducing risk to people.
 
+- **Location:** Sylhet, Bangladesh
+- **Affiliation:** Alif Subhan Chowdhury Government College
+- **Email:** [tarikurrahman2008@gmail.com](mailto:tarikurrahman2008@gmail.com)
+- **GitHub:** [@tarikurrahmann](https://github.com/tarikurrahmann)
+- **LinkedIn:** [tarikurrahmann](https://linkedin.com/in/tarikurrahmann)
+- **Facebook:** [tarikurrahmann](https://facebook.com/tarikurrahmann)
+- **X:** [@tarikurrahmann](https://x.com/tarikurrahmann)
+- **TikTok:** [@tarikurrahmann](https://tiktok.com/@tarikurrahmann)
 
-## 🔥 Key Features
+## Skills
 
-- ⚡ **Ultra-Fast Performance:** Built on Next.js App Router for optimal rendering, SSR, and instant page loads.
-- 🎨 **Modern Futuristic UI/UX:** Styled with Tailwind CSS, custom animations, and responsive tactical design.
-- 🛠️ **Modular Architecture:** Fully componentized codebase ensuring high maintainability and scalable feature deployment.
-- 🛡️ **CI/CD Integration:** Automated preview deployment pipelines synced directly with Vercel and GitHub branches.
-- 🔒 **Type-Safe Development:** High precision written almost entirely in TypeScript (98.9%).
+- **Robotics & embedded systems:** Arduino, ESP32, Raspberry Pi, sensors, microcontrollers
+- **PCB & 3D design:** KiCad, Fusion 360, Proteus, Tinkercad
+- **Software & web:** C++, Python, JavaScript, TypeScript, HTML/CSS, React, Next.js
+- **Research & tools:** ROS2, YOLO, Git/GitHub, LaTeX, MATLAB
+- **Focus areas:** autonomous systems, computer vision, IoT, digital fabrication, technical writing, mentorship
 
----
+## Experience
 
-## 👨‍💻 Developer & Lead Engineer
+| Role | Organization | Dates |
+|---|---|---|
+| System Architect | Team DEMON71 | Apr 2026–present |
+| Founder | Robo Haat BD | Dec 2025–present |
+| Club Secretary | Udvaboni Biggan Club Bahubal | Oct 2025–present |
+| Research Editor | Udvaboni Biggan Club | Feb 2023–present |
 
-<div align="center">
+At Team DEMON71, I work on system architecture, hardware/software integration, computer vision, remote operation, and the team's web presence. Through Robo Haat BD and Udvaboni Biggan Club, I support robotics education, research, workshops, and student projects.
 
-### **Tarikur Rahman**
-*Full-Stack Engineer | AI Automation Developer | Defense Robotics Enthusiast*
+## Featured Projects
 
-[![GitHub Profile](https://img.shields.io/badge/GitHub-tarikurrahmann-181717?style=flat-square&logo=github)](https://github.com/tarikurrahmann)
-[![Portfolio](https://img.shields.io/badge/Website-YourTarikur-blue?style=flat-square&logo=googlechrome)](https://yourtarikur.vercel.app)
+- **[PHANTOM-X](https://yourtarikur.vercel.app/projects/PHANTOM-X/):** Remote-operated rover prototype for reconnaissance and hazardous-environment response. System Architect & Developer; developed with Team DEMON71.
+- **[PHOENIX-F1](https://yourtarikur.vercel.app/projects/PHOENIX-F1/):** Firefighting rover prototype intended to support emergency response while reducing responders' exposure to danger. Lead Coder.
+- **[AETHER-H1](https://yourtarikur.vercel.app/projects/AETHER-H1/):** My first project, a NodeMCU smart-home prototype combining environmental monitoring, mobile-app control, alerts, and home automation.
 
-***"Engineering future-ready intelligent automation and high-impact web architectures."***
+### Web Projects
 
-</div>
+- [TEAM DEMON71](https://teamdemon71.vercel.app/) — Rover team website
+- [FAYZEE CREATIVE](https://fayzeecreative.vercel.app/) — Creative agency website
+- [DEMON71](https://demon71.netlify.app/) — Robotics brand website
 
----
+## Awards
 
-## 🛠️ Tech Stack & Technologies
+- **Gold Medal** — ATLÂNTIA International STEM Olympiad 2026; qualified for the international round in Turkey with PHANTOM-X.
+- **Gold Medal** — 8th World Invention Competition and Exhibition (WICE) 2026; qualified for the international round in Malaysia with PHANTOM-X.
+- **Special 5th Place, National Round** — 47th National Science & Technology Week 2026, with Team DEMON71 and PHANTOM-X.
+- **Finalist, National Round** — Fibonacci International Robot & STEM Olympiad 2026, with Team DEMON71 and PHANTOM-X.
+- **Top 10 Finalist** — National Science Fest 2025, presenting AETHER-H1 and PHOENIX-F1 with Udvaboni Biggan Club.
+- **1st Place, Sylhet Division** — 47th National Science & Technology Week 2026, with PHANTOM-X.
+- **1st Place, Habiganj District** — 47th National Science & Technology Week 2026, with PHANTOM-X.
+- **1st Place, Bahubal Upazila** — 47th National Science & Technology Week 2026, with PHANTOM-X.
+- **1st Place, Bahubal Upazila** — 45th National Science & Technology Week 2024, Science Project category.
+- **1st Place, Bahubal Upazila** — National Children's Award Competition 2022, Science Project category (awarded July 2023).
+- **2nd Place, Habiganj District** — National Children's Award Competition 2022, Science Project category (awarded July 2023).
 
-- **Frontend Framework:** [Next.js](https://nextjs.org/) (App Router)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling & UI:** Tailwind CSS, PostCSS
-- **Deployment & Hosting:** [Vercel](https://vercel.com/)
-- **Version Control:** Git & GitHub
+## About This Website
 
----
+YourTarikur is a responsive portfolio built with Next.js App Router, React, TypeScript, and Tailwind CSS. It presents profile information, experience, projects, awards, and a project gallery.
 
-## 🚀 Getting Started locally
+### Run Locally
 
-To run and inspect the repository locally on your device:
+```bash
+git clone https://github.com/TarikurRahman/YourTarikur.git
+cd YourTarikur
+npm install
+npm run dev
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/TarikurRahman/YourTarikur.git
-   ```
+Open [http://localhost:3000](http://localhost:3000).
 
-2. **Navigate into the project directory:**
-   ```bash
-   cd YourTarikur
-   ```
+## Credits & Attribution
 
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+- Turkey and Malaysia flag artwork is adapted from [HatScripts/circle-flags](https://github.com/HatScripts/circle-flags), licensed under the MIT License.
+- The project is based on [RH Shihab's my-portfolio](https://github.com/RHShihab/my-portfolio); this repository contains Tarikur Rahman's customizations and features.
 
-4. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+## License
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
-
----
-
-## 🙌 Acknowledgements & Credits
-
-- Special thanks and credit to **[RH Shihab](https://github.com/RHShihab)** for the foundational base template ([my-portfolio](https://github.com/RHShihab/my-portfolio)). 
-- Customizations, advanced feature integrations, and responsive re-architecting maintained by **[Tarikur Rahman](https://github.com/tarikurrahmann)**.
-
----
-
-## 📄 License & Attribution
-
-Designed and developed by **Tarikur Rahman**. All rights reserved.  
-*Powered by TEAM FLUX & Next-Gen Innovation.*
+Designed and developed by Tarikur Rahman. All rights reserved.

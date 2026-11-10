@@ -213,7 +213,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={toggleMode}
-              className="h-11 w-11 rounded-full border border-slate-200/50 dark:border-slate-800/40 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200/50 dark:border-slate-800/40 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95"
               aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
               {darkMode ? <FiMoon className="w-4 h-4" /> : <FiSun className="w-4 h-4" />}
@@ -223,7 +223,7 @@ const Navbar = () => {
               type="button"
               ref={menuButtonRef}
               onClick={() => setMenuOpen((open) => !open)}
-              className="md:hidden h-11 w-11 rounded-full border border-slate-200/50 dark:border-slate-800/40 text-slate-600 dark:text-slate-300 transition-all active:scale-95 active:bg-slate-100 dark:active:bg-slate-800"
+              className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200/50 dark:border-slate-800/40 text-slate-600 dark:text-slate-300 transition-all active:scale-95 active:bg-slate-100 dark:active:bg-slate-800"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
@@ -266,7 +266,7 @@ const Navbar = () => {
                   menuButtonRef.current?.focus();
                 }}
                 aria-label="Close menu"
-                className="h-11 w-11 rounded-full border border-slate-200 dark:border-slate-800 text-slate-700 transition-colors active:bg-slate-100 dark:text-slate-300 dark:active:bg-slate-800"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 text-slate-700 transition-colors active:bg-slate-100 dark:text-slate-300 dark:active:bg-slate-800"
               >
                 <FiX className="w-5 h-5" />
               </button>
@@ -327,14 +327,14 @@ const Navbar = () => {
                 </section>
               </div>
             </nav>
-            <div className="mt-3 flex shrink-0 items-center justify-between border-t border-slate-200/80 pt-4 dark:border-slate-800">
-              <p className="max-w-40 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+            <div className="mt-3 grid shrink-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-2xl border border-purple-200/70 bg-purple-50/70 p-3 dark:border-purple-400/15 dark:bg-purple-500/5">
+              <p className="text-xs font-medium leading-relaxed text-slate-600 dark:text-slate-300">
                 Turning ideas into real-world technology.
               </p>
               <Link
                 href="/#contact"
                 onClick={() => handleNavClick("/#contact")}
-                className="inline-flex min-h-11 items-center gap-2 rounded-full bg-purple-600 px-4 text-sm font-semibold text-white transition-colors active:bg-purple-700"
+                className="inline-flex min-h-11 items-center gap-2 rounded-full bg-linear-to-r from-purple-600 to-fuchsia-600 px-4 text-sm font-semibold text-white shadow-md shadow-purple-900/15 transition hover:shadow-lg active:scale-[0.98] active:from-purple-700 active:to-fuchsia-700"
               >
                 Say hello <span aria-hidden="true">→</span>
               </Link>

@@ -172,7 +172,7 @@ export const AWARDS: Record<
       logo: AtlantiaLogo,
       projects: ["PHANTOM-X"],
       qualification: "Qualified for the International Round in Turkey",
-      qualificationFlag: "/images/flags/turkey.svg",
+      qualificationFlag: "/images/flags/turkey.webp",
     },
     {
       year: "2026",
@@ -184,7 +184,7 @@ export const AWARDS: Record<
       logo: WiceLogo,
       projects: ["PHANTOM-X"],
       qualification: "Qualified for the International Round in Malaysia",
-      qualificationFlag: "/images/flags/malaysia.svg",
+      qualificationFlag: "/images/flags/malaysia.webp",
     },
     {
       year: "2026",
